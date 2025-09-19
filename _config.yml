@@ -3,7 +3,6 @@ title: "My Blog"
 description: "Writing about X"
 url: "https://code2motion.github.io"
 baseurl: "/blog"
-theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
