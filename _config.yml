@@ -1,8 +1,25 @@
-# _config.yml
+# Site settings
+logo: "/assets/images/logo.png" # ← placeholder; add your logo file
 title: "My Blog"
 description: "Writing about X"
 url: "https://code2motion.github.io" # your site URL
 baseurl: "/blog" # the subpath if applicable
+
+# Show excerpts on lists and cards
+show_excerpts: true
+excerpt_separator: "<!--more-->" # Put this in posts to control the excerpt
+
+# Navigation (uses _data/navigation.yml)
+collections: # ensure posts are recognized
+posts:
+output: true
+
+# Minimal Mistakes options for home/cards
+paginate: 6 # how many posts per page on the home
+paginate_path: "/page:num/"
+
+# Enable pretty permalinks (optional but nice)
+permalink: /:categories/:title/
 
 # Add the theme
 remote_theme: "mmistakes/minimal-mistakes"

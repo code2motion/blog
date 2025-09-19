@@ -1,0 +1,46 @@
+{% comment %}
+Renders a horizontal post card for Minimal Mistakes.
+Usage: {% include post-card.html post=post %}
+{% endcomment %}
+
+
+{% assign p = include.post %}
+<article class="card card--post"
+    style="display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem; padding:1rem; border:1px solid var(--mm-border-color, #eaeaea); border-radius:0.75rem;">
+    {% if p.header.overlay_image or p.image %}
+    <a href="{{ p.url | relative_url }}"
+        style="flex:0 0 200px; max-width:200px; overflow:hidden; border-radius:0.5rem;">
+        <img src="{{ p.header.overlay_image | default: p.image | relative_url }}" alt="{{ p.title | escape }}"
+            style="width:100%; height:140px; object-fit:cover;">
+    </a>
+    {% endif %}
+    <div style="flex:1 1 auto;">
+        <h3 style="margin:0 0 .25rem 0;"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <p style="margin:.25rem 0; font-size:.9rem; opacity:.75;">{{ p.date | date: site.minima.date_format | default:
+            "%b %-d, %Y" }}</p>
+
+
+        {% if p.excerpt %}
+        <p style="margin:.5rem 0 1rem 0;">{{ p.excerpt | strip_html | truncate: 180 }}</p>
+        {% endif %}
+
+
+        <div style="display:flex; gap:.5rem; flex-wrap:wrap; align-items:center;">
+            <a class="btn" href="{{ p.url | relative_url }}"
+                style="padding:.5rem .9rem; border-radius:.5rem; border:1px solid var(--mm-border-color, #eaeaea); text-decoration:none;">Learn
+                more</a>
+
+
+            <details style="margin-left:.25rem;">
+                <summary>Quick summary</summary>
+                <div style="margin-top:.5rem;">
+                    {% if p.excerpt %}
+                    {{ p.excerpt }}
+                    {% else %}
+                    <p>No summary provided yet. Add one with `excerpt` in front matter or `<!--more-->` in the post.</p>
+                    {% endif %}
+                </div>
+            </details>
+        </div>
+    </div>
+</article>
