@@ -1,17 +1,26 @@
 # _config.yml
 title: "My Blog"
 description: "Writing about X"
-url: "https://code2motion.github.io"
-baseurl: "/blog"
+url: "https://code2motion.github.io" # your site URL
+baseurl: "/blog" # the subpath if applicable
+
+# Add the theme
+remote_theme: "mmistakes/minimal-mistakes"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-include-cache
   - jekyll-remote-theme
-minimal_mistakes_skin: "default" 
+
+# Minimal Mistakes settings
+minimal_mistakes_skin: "default" # other options: "air", "aqua", "contrast", etc.
+enable_copy_code_button: true
+
+# Search (Lunr.js)
 lunr:
   search_within_pages: true
-enable_copy_code_button: true
+
 defaults:
   - scope:
       path: ""
@@ -20,5 +29,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+
 author:
   name: "Nuwan Samarasinghe"
