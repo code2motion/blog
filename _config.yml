@@ -9,6 +9,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-remote-theme
 minimal_mistakes_skin: "default" 
 lunr:
   search_within_pages: true
