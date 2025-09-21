@@ -1,0 +1,113 @@
+<<<<<<< HEAD
+title: "Techy Blog"
+description: "Writing about new technologies and how to use them"
+url: "https://code2motion.github.io"
+baseurl: "/blog"
+
+# Minimal Mistakes via remote theme
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Theme skin
+minimal_mistakes_skin: "dirt"
+
+# Header logo image path
+logo: "/assets/images/logo3.png"
+
+# Quality-of-life
+enable_copy_code_button: true
+
+# Search
+search: true
+search_provider: lunr # default
+# Index only excerpts by default; set true to index entire posts
+search_full_content: false
+
+lunr:
+  search_within_pages: true
+
+# Make sure posts are output
+collections:
+  posts:
+    output: true
+
+# Defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+
+author:
+  name: "Nuwan Samarasinghe"
+  bio: "I’m a software engineer and working with Java, AWS, and GitLab to build secure, scalable applications. Passionate about clean code and continuous learning, I enjoy creating solutions that make a real impact."
+  avatar: "/assets/images/bio/bio-photo-2.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nuwansamarasinghe100@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/nuwan-samarasinghe-it/"
+    - label: "Github"
+      icon: "fab fa-github-square"
+      url: "https://github.com/nuwan-samarasinghe"
+
+# Show excerpts in lists/cards
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+# Pretty URLs
+permalink: /:categories/:title/
+
+# Optional: your timezone
+timezone: Europe/London
+
+# Sass pipeline (Minimal Mistakes)
+sass:
+  style: compressed
+
+
+# Comments
+repository: "code2motion/blog"
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: "R_kgDOPzRx0Q"          # from giscus.app
+    category_name: "General"         # or your chosen category
+    category_id: "DIC_kwDOPzRx0c4CvuWo"  # from giscus.app
+    discussion_term: "pathname"      # or "url", "title", "og:title"
+    reactions_enabled: "1"
+    theme: "preferred_color_scheme"
+=======
+# _config.yml
+title: "My Blog"
+description: "Writing about X"
+url: "https://code2motion.github.io"
+baseurl: "/blog"
+theme: null
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Minimal Mistakes tweaks
+minimal_mistakes_skin: "default"   # try "dark", "neon", "air", etc.
+search: true
+lunr:
+  search_within_pages: true
+enable_copy_code_button: true   # handy for code posts
+defaults:
+  - scope: { path: "", type: posts }
+    values: { read_time: true } # shows reading time on posts
+author:
+  name: "Nuwan Samarasinghe"
+>>>>>>> 398256f (Commit first blog for testing)

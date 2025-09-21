@@ -1,0 +1,34 @@
+{% comment %}
+Renders a horizontal post card for Minimal Mistakes.
+Usage: {% include post-card.html post=post %}
+{% endcomment %}
+
+{% assign p = include.post %}
+<div class="feature__item">
+  <div class="archive__item">
+    {% if p.header.overlay_image %}
+    <div class="archive__item-teaser">
+      <img src="{{ p.header.overlay_image | relative_url }}" alt="Overlay">
+      {% if p.image_caption %}
+      <span class="archive__item-caption">{{ p.image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="archive__item-body">
+      {% if p.title %}
+      <h2 class="archive__item-title">{{ p.title }}</h2>
+      {% endif %}
+
+      {% if p.excerpt %}
+      <div class="archive__item-excerpt">
+        {{ p.excerpt | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if p.url %}
+        <p><a href="{{ p.url | relative_url }}" class="btn {{ p.btn_class }}">Learn More</a></p>
+      {% endif %}
+    </div>
+  </div>
+</div>
