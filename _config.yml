@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 title: "Techy Blog"
 description: "Writing about new technologies and how to use them"
 url: "https://code2motion.github.io"
@@ -87,27 +86,3 @@ comments:
     discussion_term: "pathname"      # or "url", "title", "og:title"
     reactions_enabled: "1"
     theme: "preferred_color_scheme"
-=======
-# _config.yml
-title: "My Blog"
-description: "Writing about X"
-url: "https://code2motion.github.io"
-baseurl: "/blog"
-theme: null
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Minimal Mistakes tweaks
-minimal_mistakes_skin: "default"   # try "dark", "neon", "air", etc.
-search: true
-lunr:
-  search_within_pages: true
-enable_copy_code_button: true   # handy for code posts
-defaults:
-  - scope: { path: "", type: posts }
-    values: { read_time: true } # shows reading time on posts
-author:
-  name: "Nuwan Samarasinghe"
->>>>>>> 398256f (Commit first blog for testing)
